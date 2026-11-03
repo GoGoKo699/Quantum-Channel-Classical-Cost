@@ -107,6 +107,8 @@ q_t\longrightarrow0
 \frac{|c_t|^2}{q_t}\longrightarrow0.
 ```
 
+If $`q_t=0`$, positivity also forces $`c_t=0`$; the ratio is defined as zero in that case.
+
 A non-entanglement-breaking qubit channel with a pure output instead gives a positive limiting ratio. This incompatibility proves the converse. The argument requires a measure-theoretic step to control the shared seeds; a picture of a finite deterministic polygon alone would not prove it.
 
 The positive cases use different geometry. If every output is mixed, compactness places the whole output set strictly inside the Bloch sphere. A finite polytope of pure states can contain it, letting Alice sample a vertex label. Entanglement-breaking channels have a finite measure-and-prepare representation. These two constructions and the converse give the complete exact criterion.
