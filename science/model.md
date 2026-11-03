@@ -28,7 +28,7 @@ Bob is asked to perform an arbitrary finite-outcome POVM $`\mathsf Q=\{Q_y\}_y`$
 \Omega^{\mathrm{ideal}}_{\rho,\omega,\mathsf Q}
 =
 \sum_y |y\rangle\langle y|_Y\otimes
-\operatorname{Tr}_{A'B}
+\mathrm{Tr}_{A'B}
 \left[
 (Q_y\otimes I_R)
 \bigl(\mathcal N(\rho)\otimes\omega_{BR}\bigr)
@@ -80,7 +80,7 @@ The simulated classical–quantum output is
 \sum_{m=1}^M p(m\mid\rho,\lambda)
 \sum_y |y\rangle\langle y|_Y\\
 &\otimes
-\operatorname{Tr}_B
+\mathrm{Tr}_B
 \left[
 (F_y^{\lambda,m,\mathsf Q}\otimes I_R)
 \omega_{BR}
@@ -145,11 +145,11 @@ The unrestricted decoder still has a useful physical constraint. Take $`B`$ to b
 For any side-input state $`\sigma_B`$,
 
 ```math
-\operatorname{Tr}\!\left[
+\mathrm{Tr}\!\left[
 \Phi\bigl(\mathcal N(\rho)\otimes\sigma\bigr)
 \right]
 =
-\operatorname{Tr}\!\left[
+\mathrm{Tr}\!\left[
 \frac{\mathcal N(\rho)^{\mathsf T}}2\,\sigma
 \right],
 ```
@@ -181,7 +181,7 @@ E_\rho-\frac{\mathcal N(\rho)^{\mathsf T}}2
 \le\varepsilon.
 ```
 
-Indeed, a binary total variation error is the absolute error in either outcome probability, and the supremum of $`|\operatorname{Tr}(H\sigma)|`$ over states $`\sigma`$ is $`\|H\|_\infty`$ for Hermitian $`H`$.
+Indeed, a binary total variation error is the absolute error in either outcome probability, and the supremum of $`|\mathrm{Tr}(H\sigma)|`$ over states $`\sigma`$ is $`\|H\|_\infty`$ for Hermitian $`H`$.
 
 This condition is used only as a lower-bound consequence of the full task. It is not asserted to be a sufficient test for generic simulation. It also remains necessary if Alice is told in advance that this single Bell measurement will be requested.
 

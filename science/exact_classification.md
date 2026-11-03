@@ -233,7 +233,7 @@ When $`\gamma=0`$, linearity gives the explicit measure-and-prepare channel
 
 It is entanglement breaking.
 
-Conversely, define the normalized Choi state $`\chi_{\mathcal N}=(\operatorname{id}\otimes\mathcal N)(\Phi)`$ in input–output tensor order, with $`\Phi=|\Phi^+\rangle\langle\Phi^+|`$ and $`|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2`$. For an entanglement-breaking channel this state is separable, and its partial transpose on the input factor must be positive. For the displayed normal form, the principal submatrix of that partial transpose on the span of $`|01\rangle`$ and $`|10\rangle`$ is
+Conversely, define the normalized Choi state $`\chi_{\mathcal N}=(\mathrm{id}\otimes\mathcal N)(\Phi)`$ in input–output tensor order, with $`\Phi=|\Phi^+\rangle\langle\Phi^+|`$ and $`|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2`$. For an entanglement-breaking channel this state is separable, and its partial transpose on the input factor must be positive. For the displayed normal form, the principal submatrix of that partial transpose on the span of $`|01\rangle`$ and $`|10\rangle`$ is
 
 ```math
 \frac12
@@ -353,7 +353,7 @@ In finite dimensions an entanglement-breaking channel has a finite measure-and-p
 ```math
 \mathcal N(\rho)
 =
-\sum_j \operatorname{Tr}(H_j\rho)\tau_j,
+\sum_j \mathrm{Tr}(H_j\rho)\tau_j,
 \qquad
 H_j\ge0,
 \qquad

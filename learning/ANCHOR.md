@@ -91,8 +91,8 @@ Complete dephasing is an entanglement-breaking channel. Residual coherence chang
 Write $`\Phi=|\Phi^+\rangle\langle\Phi^+|`$ for the Bell projector. For any qubit output $`\sigma`$ and unknown side state $`\tau`$,
 
 ```math
-\operatorname{Tr}[\Phi(\sigma\otimes\tau)]
-=\frac12\operatorname{Tr}(\sigma^{\mathsf T}\tau).
+\mathrm{Tr}[\Phi(\sigma\otimes\tau)]
+=\frac12\mathrm{Tr}(\sigma^{\mathsf T}\tau).
 ```
 
 The transpose matters for complex states. For example, two copies of $`(|0\rangle+i|1\rangle)/\sqrt2`$ have zero overlap with the Bell vector, consistent with this formula.

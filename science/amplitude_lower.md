@@ -19,7 +19,7 @@ Alice receives a classical description of an arbitrary qubit state $`\rho`$. Bob
 For every input $`\rho`$, every allowed Bob state, and every requested POVM, the simulator must approximate the ideal outcome distribution within total variation distance $`\varepsilon`$, with
 
 ```math
-\operatorname{TV}(P,Q)=\frac12\sum_k|P(k)-Q(k)|.
+\mathrm{TV}(P,Q)=\frac12\sum_k|P(k)-Q(k)|.
 ```
 
 The theorem below needs only the restricted subtask in which $`B`$ is one uncorrelated unknown qubit and the requested measurement is the fixed binary Bell-projector POVM
@@ -36,11 +36,12 @@ Consequently the bound also applies when Bob may hold an arbitrarily large or ex
 
 **Theorem.** Let $`0\lt \eta\lt 1`$ and $`0\lt \varepsilon\leq1/64`$. Any simulator for the restricted subtask above uses an alphabet satisfying
 
+**Equation (1).**
+
 ```math
 M\ \geq\ \frac{\eta}{256\varepsilon}
 \min\left\{\frac14,
 \sqrt{\frac{\varepsilon}{\eta(1-\eta)}}\right\}.
-\tag{1}
 ```
 
 In particular, for each fixed $`0\lt \eta\lt 1`$, whenever
@@ -52,18 +53,20 @@ In particular, for each fixed $`0\lt \eta\lt 1`$, whenever
 
 we have
 
+**Equation (2).**
+
 ```math
 M\ \geq\ \frac1{256}
 \sqrt{\frac{\eta}{1-\eta}}\,\varepsilon^{-1/2}.
-\tag{2}
 ```
 
 Thus $`M_\eta(\varepsilon)=\Omega_\eta(\varepsilon^{-1/2})`$, and the worst-case one-way bit cost obeys
 
+**Equation (3).**
+
 ```math
 C_\eta(\varepsilon)\geq
 \frac12\log_2\frac1\varepsilon-O_\eta(1).
-\tag{3}
 ```
 
 The constants in (1)–(2) are deliberately conservative. Equation (1) is a valid uniform lower estimate, not a claim of a matched two-parameter crossover law. The endpoints are treated separately in Section 7.
@@ -73,45 +76,49 @@ The constants in (1)–(2) are deliberately conservative. Equation (1) is a vali
 Let $`(\Omega,\mathcal F,\mu)`$ be any probability space for the shared random variable $`\lambda`$. No finite-support, entropy, or density assumption is made about $`\mu`$. For the fixed binary measurement, Bob's probability of declaring the Bell outcome, conditional on $`(m,\lambda)`$, is
 
 ```math
-\operatorname{Tr}[F_m(\lambda)\tau],
+\mathrm{Tr}[F_m(\lambda)\tau],
 \qquad 0\leq F_m(\lambda)\leq I_2.
 ```
 
 This follows from the Born rule for a physical binary instrument, after absorbing any local ancillas and private randomness into its effect. For Alice's input $`\rho`$, let $`p(m\mid\rho,\lambda)`$ be the message distribution. The resulting effect on Bob's qubit is
 
+**Equation (4).**
+
 ```math
 E_\rho=
 \int_\Omega\sum_{m=1}^{M}
 p(m\mid\rho,\lambda)F_m(\lambda)\,d\mu(\lambda).
-\tag{4}
 ```
 
 The ideal effect is
 
+**Equation (5).**
+
 ```math
 T_\rho=\frac12\mathcal A_\eta(\rho)^T,
-\tag{5}
 ```
 
 because
 
 ```math
-\operatorname{Tr}\bigl[\Phi^+(\mathcal A_\eta(\rho)\otimes\tau)\bigr]
-=\frac12\operatorname{Tr}[\mathcal A_\eta(\rho)^T\tau].
+\mathrm{Tr}\bigl[\Phi^+(\mathcal A_\eta(\rho)\otimes\tau)\bigr]
+=\frac12\mathrm{Tr}[\mathcal A_\eta(\rho)^T\tau].
 ```
 
 For binary distributions, total variation equals the absolute difference in one outcome probability. Uniform accuracy for every unknown $`\tau`$ therefore gives
 
+**Equation (6).**
+
 ```math
 \|E_\rho-T_\rho\|_\infty\leq\varepsilon.
-\tag{6}
 ```
 
 In particular,
 
+**Equation (7).**
+
 ```math
-\operatorname{Tr}E_\rho\geq\frac12-2\varepsilon.
-\tag{7}
+\mathrm{Tr}\,E_\rho\geq\frac12-2\varepsilon.
 ```
 
 The factor two in (7) is the dimension of Bob's qubit. Alice may know the requested Bell measurement: the proof gives her that knowledge and still obtains the lower bound.
@@ -120,24 +127,28 @@ The factor two in (7) is the dimension of Bob's qubit. Alice may know the reques
 
 Use pure inputs
 
+**Equation (8).**
+
 ```math
 |\psi_{p,\phi}\rangle
 =\sqrt{1-p}\,|0\rangle+e^{i\phi}\sqrt p\,|1\rangle,
 \qquad 0\leq p\leq p_*,\quad 0\leq\phi\lt 2\pi,
-\tag{8}
 ```
 
 where
 
+**Equation (9).**
+
 ```math
 p_*:=\min\left\{\frac14,
 \sqrt{\frac{\varepsilon}{\eta(1-\eta)}}\right\}.
-\tag{9}
 ```
 
 This is a disk in the natural complex amplitude $`z=\sqrt{p/(1-p)}e^{i\phi}`$, with radius $`\sqrt{p_*/(1-p_*)}`$. The parameter $`p`$ is the excited-state population, not that stereographic radius squared.
 
 The output is
+
+**Equation (10).**
 
 ```math
 \rho_{p,\phi}:=\mathcal A_\eta(\psi_{p,\phi})
@@ -146,32 +157,34 @@ The output is
 1-\eta p&\sqrt{\eta p(1-p)}e^{-i\phi}\\
 \sqrt{\eta p(1-p)}e^{i\phi}&\eta p
 \end{pmatrix}.
-\tag{10}
 ```
 
 Its Bloch-vector length and eigenvalues are
 
+**Equation (11).**
+
 ```math
 R(p)=\sqrt{1-4\eta(1-\eta)p^2},\qquad
 \lambda_\pm(p)=\frac{1\pm R(p)}2.
-\tag{11}
 ```
 
 For $`0\leq p\leq1/4`$, $`R(p)\geq\sqrt{15/16}>0`$, so the dominant eigenvector is unique. Let $`u_{p,\phi}`$ denote the dominant eigenvector of $`\rho_{p,\phi}^T`$. Its Bloch polar angle $`\beta(p)`$ is determined by
 
+**Equation (12).**
+
 ```math
 \cos\beta(p)=\frac{1-2\eta p}{R(p)}.
-\tag{12}
 ```
 
 Transposition changes the azimuth from $`\phi`$ to $`-\phi`$, which preserves spherical area. Define $`q(p)=1-\cos\beta(p)`$. Direct differentiation gives
+
+**Equation (13).**
 
 ```math
 q'(p)=
 \frac{2\eta[1-2(1-\eta)p]}{R(p)^3}
 \geq\eta>0
 \qquad (0\leq p\leq1/4).
-\tag{13}
 ```
 
 The inequality uses $`1-2(1-\eta)p\geq1/2`$ and $`R(p)\leq1`$. Thus the output dominant eigenvectors cover exactly the full cap
@@ -182,22 +195,26 @@ The inequality uses $`1-2(1-\eta)p\geq1/2`$ and $`R(p)\leq1`$. Thus the output d
 
 Their spherical-area Jacobian is explicit:
 
+**Equation (14).**
+
 ```math
 dA=\sin\beta\,d\beta\,d\phi=q'(p)\,dp\,d\phi.
-\tag{14}
 ```
 
 In particular, this cap has area
 
+**Equation (15).**
+
 ```math
-A_*:=\operatorname{area}(\mathcal C_*)
+A_*:=\mathrm{area}(\mathcal C_*)
 =2\pi q(p_*)\geq2\pi\eta p_*.
-\tag{15}
 ```
 
 Except for the north pole, the cap parametrization is one-to-one after fixing the usual azimuth convention; the pole has zero spherical area. Uniform area integration over $`\mathcal C_*`$ is consequently a legitimate average over the input family (8), with density proportional to $`q'(p)`$.
 
 The ideal Bell effect $`T_{p,\phi}=\rho_{p,\phi}^T/2`$ has leakage in the orthogonal eigenvector bounded by
+
+**Equation (16).**
 
 ```math
 \begin{aligned}
@@ -206,14 +223,14 @@ The ideal Bell effect $`T_{p,\phi}=\rho_{p,\phi}^T/2`$ has leakage in the orthog
 &=\frac{\eta(1-\eta)p^2}{1+R(p)}\\
 &\leq\eta(1-\eta)p_*^2\leq\varepsilon.
 \end{aligned}
-\tag{16}
 ```
 
 Together with (6), this yields, for every cap direction $`u`$ and its associated input,
 
+**Equation (17).**
+
 ```math
 L(u):=\langle u^\perp|E_u|u^\perp\rangle\leq2\varepsilon.
-\tag{17}
 ```
 
 Here $`E_u`$ abbreviates the simulated effect for that particular input; it need not vary continuously with $`u`$.
@@ -224,7 +241,7 @@ For every nonzero decoder effect write
 
 ```math
 F_m(\lambda)=t_m(\lambda)\sigma_m(\lambda),\qquad
-t_m=\operatorname{Tr}F_m\in(0,2],
+t_m=\mathrm{Tr}\,F_m\in(0,2],
 ```
 
 where $`\sigma_m`$ is a density matrix. Set $`t_m=0`$ for a zero effect and choose its normalized state arbitrarily. Introduce the nonnegative trace weights
@@ -234,11 +251,12 @@ w_m(u,\lambda)
 =p(m\mid\rho_u,\lambda)t_m(\lambda).
 ```
 
-Their total integrated mass is $`\operatorname{Tr}E_u`$. Set
+Their total integrated mass is $`\mathrm{Tr}\,E_u`$. Set
+
+**Equation (18).**
 
 ```math
 \delta:=16\varepsilon\leq\frac14.
-\tag{18}
 ```
 
 Call a response state good at $`u`$ if
@@ -249,20 +267,22 @@ Call a response state good at $`u`$ if
 
 For a bad response, its leakage into $`u^\perp`$ is greater than $`\delta`$. Therefore the integrated trace weight of all bad responses is at most $`L(u)/\delta\leq1/8`$. The total good trace weight
 
+**Equation (19).**
+
 ```math
 G(u):=\int_\Omega\sum_m
 w_m(u,\lambda)
 \mathbf{1}\{\langle u|\sigma_m(\lambda)|u\rangle\geq1-\delta\}
 \,d\mu(\lambda)
-\tag{19}
 ```
 
 satisfies
 
+**Equation (20).**
+
 ```math
 G(u)\geq\frac12-2\varepsilon-\frac18
 \geq\frac{11}{32}>\frac14.
-\tag{20}
 ```
 
 The weaker bound $`G(u)\geq1/4`$ is sufficient. This step accounts for the fact that decoder effects need not have unit trace and need not themselves be output states.
@@ -280,13 +300,16 @@ has Bloch-sphere area at most $`4\pi\delta`$.
 
 To prove it, write $`\sigma=(I+\mathbf s\cdot\boldsymbol\sigma)/2`$, with $`|\mathbf s|\leq1`$. The condition is $`\mathbf s\cdot\mathbf n_u\geq1-2\delta`$. If $`|\mathbf s|\lt 1-2\delta`$, the set is empty. Otherwise it is a cap of area
 
+**Equation (21).**
+
 ```math
 2\pi\left(1-\frac{1-2\delta}{|\mathbf s|}\right)
 \leq4\pi\delta.
-\tag{21}
 ```
 
 Now average (19) uniformly over $`\mathcal C_*`$. Since all integrands are nonnegative, Tonelli's theorem permits exchanging cap integration, the finite sum, and the shared-randomness integral. For each fixed $`\lambda`$, use $`p(m\mid\rho_u,\lambda)\leq1`$, $`t_m\leq2`$, and the area lemma to obtain
+
+**Equation (22).**
 
 ```math
 \begin{aligned}
@@ -294,11 +317,10 @@ Now average (19) uniformly over $`\mathcal C_*`$. Since all integrands are nonne
 &\leq
 \int_\Omega\frac1{A_*}\sum_{m=1}^M
 t_m(\lambda)
-\operatorname{area}(S_{\sigma_m(\lambda),\delta}\cap\mathcal C_*)
+\mathrm{area}(S_{\sigma_m(\lambda),\delta}\cap\mathcal C_*)
 \,d\mu(\lambda)\\
 &\leq\frac{8\pi M\delta}{A_*}.
 \end{aligned}
-\tag{22}
 ```
 
 But (20) bounds the left side below by $`1/4`$. Hence
@@ -327,10 +349,11 @@ The channel always produces $`|0\rangle\langle0|`$. Bob can prepare this state l
 
 The output is pure for every input. Use the whole Bloch sphere, of area $`4\pi`$, instead of a shrinking cap. The ideal Bell effect has zero orthogonal leakage; (6) gives $`L(u)\leq\varepsilon`$. With $`\delta=8\varepsilon`$ and $`\varepsilon\leq1/64`$, the same trace-weight argument has $`G(u)\geq1/4`$. Equation (22) gives
 
+**Equation (23).**
+
 ```math
 M\geq\frac{4\pi}{32\pi(8\varepsilon)}
 =\frac1{64\varepsilon}.
-\tag{23}
 ```
 
 Thus the unitary endpoint has the stronger $`\Omega(\varepsilon^{-1})`$ alphabet requirement. Input/output unitary conjugations do not change the communication task or these bounds. The divergence of the coefficient in (2) as $`\eta\uparrow1`$ reflects a nonuniform limit and is controlled by the saturation in (1); it is not an inconsistency.
