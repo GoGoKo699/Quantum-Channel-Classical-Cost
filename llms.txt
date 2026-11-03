@@ -1,0 +1,17 @@
+# Quantum Channel Classical Cost
+
+Known classical descriptions of qubit inputs; unknown physical quantum side input at the receiver; input-independent shared randomness; finite worst-case classical communication. No preshared entanglement or quantum communication.
+
+## Scientific route
+
+- science/model.md: full task, measurable encoders and contextual physical decoders, statistical versus reference-stable error, Bell-effect reduction, qualitative finite interaction.
+- science/exact_classification.md: finite exact simulation iff the channel has no pure output or is entanglement breaking; complete tangent lemma and sufficiency constructions.
+- science/geometry_and_examples.md: sharp fixed-eta amplitude-damping theorem, geometric explanation, endpoints, depolarization and dephasing examples, resource interpretation.
+- science/amplitude_lower.md: explicit lower bound using near-pure output directions, positive trace weights and cap-area integration over arbitrary shared randomness.
+- science/amplitude_upper.md: exact support function, finite adaptive spherical net, convex containment, measurable encoding, reference-stable error.
+- references/RELATED_WORK.md and references/references.bib: attribution and operational differences from adjacent simulation problems.
+- verification/README.md: deterministic finite checks, their scope, and figure reproduction.
+
+## Preserve these distinctions
+
+The main exact classification includes finite public interaction trees, but the sharp epsilon-dependent alphabet law is one-way. The approximation exponent is matched for fixed survival 0 < eta < 1; eta = 0 is complete reset and eta = 1 is identity. A four-vertex decomposition per state is not a four-message global protocol. Lower bounds do not assume state preparation or measurement noncontextuality. Reference preservation concerns Bob's unknown side input, not an unknown quantum input at Alice. Finite tests do not prove the universal or asymptotic theorems.

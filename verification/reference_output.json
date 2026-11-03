@@ -1,0 +1,39 @@
+{
+  "absolute_tolerance": 2e-12,
+  "determinant": {
+    "cases": 20,
+    "max_residual": 5.483437785558114e-17
+  },
+  "kraus_affine_and_bell": {
+    "cases": 30,
+    "max_affine_residual": 3.3306690738754696e-16,
+    "max_bell_transpose_residual": 1.1102230246251565e-16,
+    "max_error_if_transpose_omitted": 0.16666666666666666
+  },
+  "numpy_version": "2.3.5",
+  "python_version": "3.12.14",
+  "reference_contraction": {
+    "cases": 24,
+    "epsilon": 0.037,
+    "max_classical_total_variation": 0.008661140839869044,
+    "max_local_trace_distance": 0.034979384173548705,
+    "max_prepared_mixture_residual": 2.220446049250313e-16,
+    "max_product_distance_residual": 5.898059818321144e-17,
+    "max_record_reference_to_local_ratio": 0.49450880609966574,
+    "max_record_reference_trace_distance": 0.017274266492033827,
+    "max_reference_marginal_residual": 6.661569440198978e-16,
+    "side_state_negativities": [
+      0.45825756949558405,
+      0.3166060555964674
+    ]
+  },
+  "scope": "Finite checks of independent matrix representations, preparation averaging, and reference-stable contraction; not an asymptotic proof or a global codebook test.",
+  "seed": 20261103,
+  "status": "passed",
+  "support": {
+    "cases": 21,
+    "max_quartic_coefficient_relative_error": 8.781097446242114e-05,
+    "max_rationalization_residual": 1.249000902703301e-16,
+    "quartic_check_theta": 0.005
+  }
+}
