@@ -4,6 +4,7 @@ Known classical descriptions of qubit inputs; unknown physical quantum side inpu
 
 ## Scientific route
 
+- science/README.md: connected overview, proof mechanisms, authoritative result homes and reading order.
 - science/model.md: full task, measurable encoders and contextual physical decoders, statistical versus reference-stable error, Bell-effect reduction, qualitative finite interaction.
 - science/exact_classification.md: finite exact simulation iff the channel has no pure output or is entanglement breaking; complete tangent lemma and sufficiency constructions.
 - science/geometry_and_examples.md: sharp fixed-eta amplitude-damping theorem, geometric explanation, endpoints, depolarization and dephasing examples, resource interpretation.
@@ -11,6 +12,13 @@ Known classical descriptions of qubit inputs; unknown physical quantum side inpu
 - science/amplitude_upper.md: exact support function, finite adaptive spherical net, convex containment, measurable encoding, reference-stable error.
 - references/RELATED_WORK.md and references/references.bib: attribution and operational differences from adjacent simulation problems.
 - verification/README.md: deterministic finite checks, their scope, and figure reproduction.
+
+## Study route
+
+- learning/ANCHOR.md: the single selected anchor, John Watrous, The Theory of Quantum Information (2018); focused sections, notation and Choi conventions, a complete dephasing example, and the steps from textbook foundations to the project's proofs.
+- learning/MILESTONES.md: exactly M01 through M30, with 12 background/preliminaries and 18 narrative/innovation targets; dependencies, conceptual connections and authoritative source pointers.
+
+For the scientific story, start at science/README.md. For study, use the anchor bridge and milestone map alongside the canonical science. For a theorem or assumption, go directly to its scientific home; for reproduction, use verification/README.md. The shared learning files describe the science and do not record a reader's progress or prescribe personal assessment.
 
 ## Preserve these distinctions
 

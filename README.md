@@ -28,7 +28,7 @@ The generic quantum-side-input task, perfect-channel impossibility, and finite d
 
 ## Read the science
 
-Start with the [operational model](science/model.md), then the [exact classification](science/exact_classification.md). The [geometry and examples](science/geometry_and_examples.md) connect the exact result to the finite-error law. Its two proof components are the [lower bound with arbitrary shared randomness](science/amplitude_lower.md) and the [finite preparation construction](science/amplitude_upper.md).
+The [scientific overview](science/README.md) connects the question, proof mechanisms, and consequences. For the complete formal route, start with the [operational model](science/model.md), then the [exact classification](science/exact_classification.md). The [geometry and examples](science/geometry_and_examples.md) connect the exact result to the finite-error law. Its two proof components are the [lower bound with arbitrary shared randomness](science/amplitude_lower.md) and the [finite preparation construction](science/amplitude_upper.md).
 
 | To inspect | Authoritative account |
 |---|---|
@@ -43,6 +43,12 @@ Start with the [operational model](science/model.md), then the [exact classifica
 ![Amplitude-damping output ellipsoids and their quartic support deficit](figures/amplitude_geometry.svg)
 
 The left panel shows meridian sections of the output ellipsoids. Each nontrivial amplitude-damping channel retains one pure output. The right panel shows the support deficit near that point: it vanishes as the fourth power of the polar normal angle. The [geometric proof](science/amplitude_upper.md) turns this contact into the optimal message-alphabet exponent. The curves are evaluations of the channel's exact support function, not measured communication costs.
+
+## Learn the project
+
+The single educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [source-to-project bridge](learning/ANCHOR.md) selects the needed sections, translates conventions, and works through a complete two-message example before explaining the new proof mechanisms. Reading the entire book is unnecessary.
+
+The [30-milestone map](learning/MILESTONES.md) follows the scientific story: 12 background milestones assemble the operational framework, and 18 narrative milestones develop the exact classification, matching approximation bounds, and their interpretation. Each milestone records its understanding target, dependencies, conceptual connection, and sources. The map is shared scientific material and contains no personal assessment record.
 
 ## Reproduce the finite checks
 

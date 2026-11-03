@@ -233,7 +233,7 @@ When $`\gamma=0`$, linearity gives the explicit measure-and-prepare channel
 
 It is entanglement breaking.
 
-Conversely, the normalized Choi state of an entanglement-breaking channel is separable, and its partial transpose must be positive. For the displayed normal form, the principal submatrix of that partial transpose on the span of $`|01\rangle`$ and $`|10\rangle`$ is
+Conversely, define the normalized Choi state $`\chi_{\mathcal N}=(\operatorname{id}\otimes\mathcal N)(\Phi)`$ in input–output tensor order, with $`\Phi=|\Phi^+\rangle\langle\Phi^+|`$ and $`|\Phi^+\rangle=(|00\rangle+|11\rangle)/\sqrt2`$. For an entanglement-breaking channel this state is separable, and its partial transpose on the input factor must be positive. For the displayed normal form, the principal submatrix of that partial transpose on the span of $`|01\rangle`$ and $`|10\rangle`$ is
 
 ```math
 \frac12
