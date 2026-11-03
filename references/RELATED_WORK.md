@@ -34,6 +34,10 @@ Section V.4 gives an exact classical-program obstruction for two prescribed ampl
 
 This paper studies ordinary prepare-and-measure correlations: Alice receives a classical state description and Bob receives a classical measurement description. It distinguishes finite expected bits, expected alphabet size, and worst-case alphabet size, and treats bounded-alphabet approximation. Here Bob instead holds an unknown physical system. His response must be a positive affine functional of that system's state. A scalar response rule based on a fully known measurement description does not automatically define such a physical effect. The expected-bit results also do not settle the worst-case alphabet charged here.
 
+## watrous2018
+
+John Watrous, *The Theory of Quantum Information*, Cambridge University Press (2018). The [author's page](https://cs.uwaterloo.ca/~watrous/TQI/) supplies the manuscript and individual chapters. This is the single educational anchor. The [learning bridge](../learning/ANCHOR.md) selects its operator, convexity, state, channel, measurement, distinguishability, and separability material and translates the conventions used here. The project-specific finite-menu obstruction and amplitude-damping bounds are developed in the scientific pages; the textbook is not cited as a source for those results.
+
 ## Contribution and source boundaries
 
 The exact classification and matching fixed-channel amplitude-damping exponent are the results established in this repository. Standard channel representations, convex separation, Carathéodory's theorem, trace-distance contractivity and spherical area estimates supply mathematical tools. The geometric argument and the finite-effect converses are given in full rather than inferred from numerical examples.
